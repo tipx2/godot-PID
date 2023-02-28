@@ -12,7 +12,6 @@ config_version=4
 
 config/name="Godot- Pid"
 run/main_scene="res://scenes/world.tscn"
-config/icon="res://icon.png"
 
 [autoload]
 

@@ -1,16 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/box.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/ui.tscn" type="PackedScene" id=2]
+[ext_resource path="res://addons/orbit_camera/orbit_camera.gd" type="Script" id=3]
 
 [sub_resource type="CubeMesh" id=3]
 size = Vector3( 0.3, 0.3, 0.3 )
-
-[sub_resource type="PlaneMesh" id=1]
-size = Vector2( 5000, 5000 )
-
-[sub_resource type="SpatialMaterial" id=2]
-albedo_color = Color( 0, 0, 0, 1 )
 
 [node name="world" type="Spatial"]
 
@@ -64,16 +59,18 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 0 )
 [node name="MeshInstance" type="MeshInstance" parent="targets/Position3D7"]
 mesh = SubResource( 3 )
 
-[node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, -3.447, 3.446, 8.733 )
-fov = 110.8
+[node name="anchor" type="Spatial" parent="."]
 
-[node name="floor" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.77596, 0 )
-mesh = SubResource( 1 )
-material/0 = SubResource( 2 )
+[node name="orbitcam" type="Camera" parent="anchor"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.3675, 8.32367 )
+fov = 110.0
+script = ExtResource( 3 )
+SCROLL_SPEED = 100.0
+ROTATE_SPEED = 1.0
+ANCHOR_NODE_PATH = NodePath("..")
 
-[node name="wall" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -5.77596, -53.9531 )
-mesh = SubResource( 1 )
-material/0 = SubResource( 2 )
+[node name="SpotLight" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 46.5996, 0 )
+light_energy = 500.0
+spot_range = 50.0309
+spot_angle = 77.9374
