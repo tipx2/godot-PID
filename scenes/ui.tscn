@@ -74,7 +74,7 @@ text = "Proportional Gain"
 margin_top = 116.0
 margin_right = 111.0
 margin_bottom = 140.0
-step = 0.001
+step = 0.01
 allow_greater = true
 
 [node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/ColorRect/HBoxContainer/VBoxContainer"]
@@ -93,7 +93,7 @@ text = "Integral Gain"
 margin_top = 177.0
 margin_right = 111.0
 margin_bottom = 201.0
-step = 0.001
+step = 0.01
 allow_greater = true
 
 [node name="MarginContainer3" type="MarginContainer" parent="VBoxContainer/ColorRect/HBoxContainer/VBoxContainer"]
@@ -112,7 +112,7 @@ text = "Derivative Gain"
 margin_top = 238.0
 margin_right = 111.0
 margin_bottom = 262.0
-step = 0.001
+step = 0.01
 allow_greater = true
 
 [node name="MarginContainer4" type="MarginContainer" parent="VBoxContainer/ColorRect/HBoxContainer/VBoxContainer"]
