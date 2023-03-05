@@ -37,36 +37,38 @@ custom_constants/margin_left = 44
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ColorRect/HBoxContainer"]
 margin_left = 48.0
-margin_right = 143.0
+margin_right = 168.0
 margin_bottom = 575.0
 
 [node name="MarginContainer5" type="MarginContainer" parent="VBoxContainer/ColorRect/HBoxContainer/VBoxContainer"]
-margin_right = 95.0
+margin_right = 120.0
 margin_bottom = 22.0
 custom_constants/margin_top = 22
 
 [node name="target" type="Label" parent="VBoxContainer/ColorRect/HBoxContainer/VBoxContainer"]
 margin_top = 26.0
-margin_right = 95.0
-margin_bottom = 40.0
+margin_right = 120.0
+margin_bottom = 41.0
+rect_min_size = Vector2( 120, 15 )
 text = "Target"
 
 [node name="target_SpinBox" type="SpinBox" parent="VBoxContainer/ColorRect/HBoxContainer/VBoxContainer"]
-margin_top = 44.0
-margin_right = 95.0
-margin_bottom = 68.0
+margin_top = 45.0
+margin_right = 120.0
+margin_bottom = 69.0
 max_value = 6.0
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/ColorRect/HBoxContainer/VBoxContainer"]
-margin_top = 72.0
-margin_right = 95.0
-margin_bottom = 94.0
+margin_top = 73.0
+margin_right = 120.0
+margin_bottom = 95.0
 custom_constants/margin_top = 22
 
 [node name="ProportionalGain" type="RichTextLabel" parent="VBoxContainer/ColorRect/HBoxContainer/VBoxContainer"]
-margin_top = 98.0
-margin_right = 95.0
-margin_bottom = 128.0
+margin_top = 99.0
+margin_right = 120.0
+margin_bottom = 114.0
+rect_min_size = Vector2( 100, 0 )
 bbcode_enabled = true
 bbcode_text = "[color=#ff0000]Proportional Gain[/color]"
 text = "Proportional Gain"
@@ -74,22 +76,22 @@ fit_content_height = true
 scroll_active = false
 
 [node name="ProportionalGain_SpinBox" type="SpinBox" parent="VBoxContainer/ColorRect/HBoxContainer/VBoxContainer"]
-margin_top = 132.0
-margin_right = 95.0
-margin_bottom = 156.0
+margin_top = 118.0
+margin_right = 120.0
+margin_bottom = 142.0
 step = 0.01
 allow_greater = true
 
 [node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/ColorRect/HBoxContainer/VBoxContainer"]
-margin_top = 160.0
-margin_right = 95.0
-margin_bottom = 171.0
+margin_top = 146.0
+margin_right = 120.0
+margin_bottom = 157.0
 custom_constants/margin_top = 11
 
 [node name="IntegralGain" type="RichTextLabel" parent="VBoxContainer/ColorRect/HBoxContainer/VBoxContainer"]
-margin_top = 175.0
-margin_right = 95.0
-margin_bottom = 190.0
+margin_top = 161.0
+margin_right = 120.0
+margin_bottom = 176.0
 bbcode_enabled = true
 bbcode_text = "[color=#43ec1e]Integral Gain[/color]"
 text = "Integral Gain"
@@ -97,22 +99,22 @@ fit_content_height = true
 scroll_active = false
 
 [node name="IntegralGain_SpinBox" type="SpinBox" parent="VBoxContainer/ColorRect/HBoxContainer/VBoxContainer"]
-margin_top = 194.0
-margin_right = 95.0
-margin_bottom = 218.0
+margin_top = 180.0
+margin_right = 120.0
+margin_bottom = 204.0
 step = 0.01
 allow_greater = true
 
 [node name="MarginContainer3" type="MarginContainer" parent="VBoxContainer/ColorRect/HBoxContainer/VBoxContainer"]
-margin_top = 222.0
-margin_right = 95.0
-margin_bottom = 233.0
+margin_top = 208.0
+margin_right = 120.0
+margin_bottom = 219.0
 custom_constants/margin_top = 11
 
 [node name="DerivativeGain" type="RichTextLabel" parent="VBoxContainer/ColorRect/HBoxContainer/VBoxContainer"]
-margin_top = 237.0
-margin_right = 95.0
-margin_bottom = 267.0
+margin_top = 223.0
+margin_right = 120.0
+margin_bottom = 238.0
 bbcode_enabled = true
 bbcode_text = "[color=#1e5dec]Derivative Gain[/color]"
 text = "Derivative Gain"
@@ -120,42 +122,42 @@ fit_content_height = true
 scroll_active = false
 
 [node name="DerivativeGain_SpinBox2" type="SpinBox" parent="VBoxContainer/ColorRect/HBoxContainer/VBoxContainer"]
-margin_top = 271.0
-margin_right = 95.0
-margin_bottom = 295.0
+margin_top = 242.0
+margin_right = 120.0
+margin_bottom = 266.0
 step = 0.01
 allow_greater = true
 
 [node name="MarginContainer6" type="MarginContainer" parent="VBoxContainer/ColorRect/HBoxContainer/VBoxContainer"]
-margin_top = 299.0
-margin_right = 95.0
-margin_bottom = 321.0
+margin_top = 270.0
+margin_right = 120.0
+margin_bottom = 292.0
 custom_constants/margin_top = 22
 
 [node name="ConstantForce" type="Label" parent="VBoxContainer/ColorRect/HBoxContainer/VBoxContainer"]
-margin_top = 325.0
-margin_right = 95.0
-margin_bottom = 339.0
+margin_top = 296.0
+margin_right = 120.0
+margin_bottom = 310.0
 text = "Constant Force"
 
 [node name="ConstantForce_SpinBox" type="SpinBox" parent="VBoxContainer/ColorRect/HBoxContainer/VBoxContainer"]
-margin_top = 343.0
-margin_right = 95.0
-margin_bottom = 367.0
+margin_top = 314.0
+margin_right = 120.0
+margin_bottom = 338.0
 step = 0.01
 allow_greater = true
 allow_lesser = true
 
 [node name="MarginContainer4" type="MarginContainer" parent="VBoxContainer/ColorRect/HBoxContainer/VBoxContainer"]
-margin_top = 371.0
-margin_right = 95.0
-margin_bottom = 393.0
+margin_top = 342.0
+margin_right = 120.0
+margin_bottom = 364.0
 custom_constants/margin_top = 22
 
 [node name="quit" type="Button" parent="VBoxContainer/ColorRect/HBoxContainer/VBoxContainer"]
-margin_top = 397.0
-margin_right = 95.0
-margin_bottom = 417.0
+margin_top = 368.0
+margin_right = 120.0
+margin_bottom = 388.0
 text = "Quit"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]

@@ -17,12 +17,12 @@ var rate_of_currentValue : float # used for D term
 # call this however often dt (the time step) is
 func update(dt : float, currentValue : float, targetValue : float) -> float:
 	error = targetValue - currentValue
+	
 	# calculate proportional term
 	var P = P_gain * error
 	
 	
 	# calculate the derivative term
-	
 	# check if we're calculating derivative for the first time, skip if so
 	if derivative_initialised:
 		# calculate the rate of change of currentValue
