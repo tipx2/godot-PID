@@ -16,6 +16,8 @@ func _on_IntegralGain_SpinBox_value_changed(value):
 func _on_DerivativeGain_SpinBox2_value_changed(value):
 	Globals.D_gain = value
 
+func _on_ConstantForce_SpinBox_value_changed(value):
+	Globals.constant_force = value
 
 func _on_reset_pressed():
 	get_tree().quit()

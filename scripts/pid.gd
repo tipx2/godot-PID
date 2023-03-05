@@ -11,15 +11,17 @@ var derivative_initialised = false # used to skip the first rate of change calcu
 var integration_stored : float # used to sum the error over time to combat steady state error
 export(float) var integral_saturation # used to combat integral windup
 
+var error : float # variable used for all calculations, abs(error) == distance
+var rate_of_currentValue : float # used for D term
+
 # call this however often dt (the time step) is
 func update(dt : float, currentValue : float, targetValue : float) -> float:
-	var error = targetValue - currentValue # abs(error) == distance
+	error = targetValue - currentValue
 	# calculate proportional term
 	var P = P_gain * error
 	
 	
 	# calculate the derivative term
-	var rate_of_currentValue : float
 	
 	# check if we're calculating derivative for the first time, skip if so
 	if derivative_initialised:
